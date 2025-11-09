@@ -1,0 +1,37 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persian-logger"
+version = "1.0.0"
+description = "لاگ‌گیری فارسی با RTL، تاریخ جلالی و سطوح فارسی"
+authors = [{name = "نام شما", email = "you@example.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["persian", "farsi", "logging", "rtl", "jalali"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Persian"
+]
+
+dependencies = [
+"arabic-reshaper==3.0.0",
+"iniconfig==2.3.0",
+"jalali_core==1.0.0",
+"jdatetime==5.2.0",
+"packaging==25.0",
+"pluggy==1.6.0",
+"Pygments==2.19.2",
+"pytest==8.4.2",
+"python-bidi==0.6.7"
+]
+
+[project.urls]
+Source = "https://github.com/yourname/persian-logger"
+
+[tool.setuptools.packages.find]
+where = ["."]
