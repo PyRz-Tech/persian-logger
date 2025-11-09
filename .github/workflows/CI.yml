@@ -1,0 +1,32 @@
+name: PyPI Package CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+
+    - name: Install package from PyPI
+      run: |
+        pip install --upgrade pip
+        pip install persian-logger
+        pip install pytest
+
+    - name: Run tests
+      run: |
+        pytest tests --maxfail=1 --disable-warnings -q
