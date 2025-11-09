@@ -21,7 +21,7 @@ pip install persian-logger
 ## استفاده
 
 ```python
-from persian_logger.logger import get_fa_logger
+from persian_logger import get_fa_logger
 
 logger = get_fa_logger()
 
